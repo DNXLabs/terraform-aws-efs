@@ -13,11 +13,23 @@
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-No input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| access\_points | A list of the access points which will be created for the EFS volume | `list(string)` | n/a | yes |
+| encrypted | If true, the disk will be encrypted. | `bool` | n/a | yes |
+| environment\_name | Name of the Environment, for example: Alpha/Gamma/Staging/Prod | `any` | n/a | yes |
+| kms\_key\_id | The ARN for the KMS encryption key. When specifying kms\_key\_id, encrypted needs to be set to true. | `any` | n/a | yes |
+| performance\_mode | The file system performance mode. Can be either ''generalPurpose'' or ''maxIO'' (Default: ''generalPurpose'') | `any` | n/a | yes |
+| private\_subnet\_ids | The private subnet IDs in which the EFS will have a mount. | `list(string)` | n/a | yes |
+| provisioned\_throughput\_in\_mibps | The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with throughput\_mode set to provisioned. | `any` | `null` | no |
+| throughput\_mode | Throughput mode for the file system. Defaults to bursting. Valid values: bursting, provisioned. When using provisioned, also set provisioned\_throughput\_in\_mibps. | `any` | n/a | yes |
+| vpc\_id | The VPC ID of the security group, in case the variable security\_groups is empty | `any` | n/a | yes |
 
 ## Outputs
 
