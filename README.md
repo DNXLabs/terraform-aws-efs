@@ -33,7 +33,12 @@
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| access\_point\_ids | EFS AP ids |
+| file\_system\_arn | n/a |
+| file\_system\_id | n/a |
+| mount\_target\_id | n/a |
 
 <!--- END_TF_DOCS --->
 
