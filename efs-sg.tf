@@ -12,7 +12,7 @@ data "aws_vpc" "selected" {
   id = var.vpc_id
 }
 
-resource "aws_security_group_rule" "mwaa_sg_inbound_vpc" {
+resource "aws_security_group_rule" "efs_sg_inbound_vpc" {
   #count             = length(var.security_groups) > 0 ? 0 : 1
   type              = "ingress"
   from_port         = 2049
