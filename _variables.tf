@@ -36,6 +36,18 @@ variable "access_points" {
   description = "A list of the access points which will be created for the EFS volume"
 }
 
+variable "efs_access_point_uid" {
+  type        = number
+  description = "The uid number to associate with the EFS access point"
+  default     = 0
+}
+
+variable "efs_access_point_gid" {
+  type        = number
+  description = "The gid number to associate with the EFS access point"
+  default     = 0
+}
+
 variable "private_subnet_ids" {
   type        = list(string)
   description = "The private subnet IDs in which the EFS will have a mount."
