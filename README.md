@@ -22,6 +22,8 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | access\_points | A list of the access points which will be created for the EFS volume | `list(string)` | n/a | yes |
+| efs\_access\_point\_gid | The gid number to associate with the EFS access point | `number` | `0` | no |
+| efs\_access\_point\_uid | The uid number to associate with the EFS access point | `number` | `0` | no |
 | encrypted | If true, the disk will be encrypted. | `bool` | n/a | yes |
 | environment\_name | Name of the Environment, for example: Alpha/Gamma/Staging/Prod | `any` | n/a | yes |
 | kms\_key\_id | The ARN for the KMS encryption key. When specifying kms\_key\_id, encrypted needs to be set to true. | `any` | n/a | yes |
